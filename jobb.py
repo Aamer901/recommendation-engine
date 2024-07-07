@@ -11,7 +11,6 @@ job_df = pd.read_csv('job_data.csv')
 data = {
     'userprofile_df': userprofile_df,
     'job_df': job_df
-    
 }
 
 with open('recommended_jobs.pkl', 'wb') as file:
@@ -116,6 +115,17 @@ def main():
             background: url({background_image_url});
             background-size: cover;
         }}
+        .job-recommendation {{
+            background-color: #f0f0f0; 
+            padding: 10px; 
+            margin-bottom: 10px; 
+            border: 1px solid #333333; 
+            border-radius: 5px;
+            color: black;
+        }}
+        .job-recommendation h3 {{
+            color: green;
+        }}
         </style>
         """, unsafe_allow_html=True)
 
@@ -144,8 +154,8 @@ def main():
                     for job in recommended_jobs:
                         st.markdown(
                             f"""
-                            <div style='background-color: #f0f0f0; padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 5px;'>
-                                <h3 style='color: green;'>{job['position']}</h3>
+                            <div class='job-recommendation'>
+                                <h3>{job['position']}</h3>
                                 <p><strong>Location:</strong> {job['location']}</p>
                                 <p><strong>Skills Required:</strong> {job['skills']}</p>
                                 <p><strong>Vacancies:</strong> {job['vacancies']}</p>
@@ -170,8 +180,8 @@ def main():
                     for job in recommended_jobs:
                         st.markdown(
                             f"""
-                            <div style='background-color: #f0f0f0; padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 5px;'>
-                                <h3 style='color: green;'>{job['position']}</h3>
+                            <div class='job-recommendation'>
+                                <h3>{job['position']}</h3>
                                 <p><strong>Location:</strong> {job['location']}</p>
                                 <p><strong>Skills Required:</strong> {job['skills']}</p>
                                 <p><strong>Vacancies:</strong> {job['vacancies']}</p>
