@@ -176,7 +176,7 @@ def main():
                                 <p><strong>Skills Required:</strong> {job['skills']}</p>
                                 <p><strong>Vacancies:</strong> {job['vacancies']}</p>
                                 <p><strong>Minimum Experience Required:</strong> {job['minExp']}</p>
-                                <a href="https://YOUR_MAILCHIMP_SIGNUP_FORM_URL" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Apply</a>
+                                <a href="https://us13.list-manage.com/contact-form?u=8ac5c4589b3005482b2dcef3b&form_id=ad7d834f290d50ab3c74ac5ed2eef1b7" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Apply</a>
                             </div>
                             """,
                             unsafe_allow_html=True
