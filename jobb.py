@@ -101,6 +101,31 @@ def main():
         .section-header {
             color: white;
         }
+        .job-card {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #333333;
+            border-radius: 5px;
+            color: black;
+        }
+        .apply-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+        }
+        @media (max-width: 767px) {
+            .job-card {
+                font-size: 1em;  /* Adjust font size for mobile */
+            }
+            .apply-button {
+                padding: 8px 16px;  /* Adjust padding for mobile */
+            }
+        }
         </style>
         """, unsafe_allow_html=True
     )
@@ -143,13 +168,13 @@ def main():
                     for job in recommended_jobs:
                         st.markdown(
                             f"""
-                            <div style='background-color: #f0f0f0; padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 5px;'>
+                            <div class='job-card'>
                                 <h3 style='color: green;'>{job['position']}</h3>
                                 <p><strong>Location:</strong> {job['location']}</p>
                                 <p><strong>Skills Required:</strong> {job['skills']}</p>
                                 <p><strong>Vacancies:</strong> {job['vacancies']}</p>
                                 <p><strong>Minimum Experience Required:</strong> {job['minExp']}</p>
-                                <a href="https://us13.list-manage.com/contact-form?u=8ac5c4589b3005482b2dcef3b&form_id=ad7d834f290d50ab3c74ac5ed2eef1b7" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Apply</a>
+                                <a href="https://us13.list-manage.com/contact-form?u=8ac5c4589b3005482b2dcef3b&form_id=ad7d834f290d50ab3c74ac5ed2eef1b7" target="_blank" class="apply-button">Apply</a>
                             </div>
                             """,
                             unsafe_allow_html=True
@@ -170,13 +195,13 @@ def main():
                     for job in recommended_jobs:
                         st.markdown(
                             f"""
-                            <div style='background-color: #f0f0f0; padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 5px;'>
+                            <div class='job-card'>
                                 <h3 style='color: green;'>{job['position']}</h3>
                                 <p><strong>Location:</strong> {job['location']}</p>
                                 <p><strong>Skills Required:</strong> {job['skills']}</p>
                                 <p><strong>Vacancies:</strong> {job['vacancies']}</p>
                                 <p><strong>Minimum Experience Required:</strong> {job['minExp']}</p>
-                                <a href="https://us13.list-manage.com/contact-form?u=8ac5c4589b3005482b2dcef3b&form_id=ad7d834f290d50ab3c74ac5ed2eef1b7" target="_blank" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Apply</a>
+                                <a href="https://us13.list-manage.com/contact-form?u=8ac5c4589b3005482b2dcef3b&form_id=ad7d834f290d50ab3c74ac5ed2eef1b7" target="_blank" class="apply-button">Apply</a>
                             </div>
                             """,
                             unsafe_allow_html=True
